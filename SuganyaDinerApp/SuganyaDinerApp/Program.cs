@@ -9,6 +9,15 @@ namespace SuganyaDinerApp
             FoodMenu foodMenu = new FoodMenu();
             foodMenu.AddMenutem("Chicken Briyani", "Biriyani with chicken", 100);
             foodMenu.AddMenutem("Mutton Briyani", "Biriyani with Mutton", 200);
+            try
+            {
+                foodMenu.AddMenutem("Chicken Briyani", "Biriyani with chicken", -100);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            
             foodMenu.Name = "Suganya Diner";
             foodMenu.HospitalDirection = "Government Hospital is near to Bus stand";
 
@@ -28,6 +37,7 @@ namespace SuganyaDinerApp
             {
                 venkatOrder.items.Add(drinkMenu.MenuItems[i]);
             }
+            
             Console.WriteLine(venkatOrder.Total);
         }
     }

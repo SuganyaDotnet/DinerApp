@@ -17,6 +17,17 @@ namespace SuganyaDinerApp
             drinkMenu.AddMenutem("Fanta", "Fanta description", 50);
             drinkMenu.AddMenutem("Mango", "Mango description", 50);
             drinkMenu.Disclaimer="if you drink juice,you will get cold";
+
+            Order venkatOrder = new Order();
+            foreach (var item in foodMenu.MenuItems)
+            {
+                venkatOrder.items.Add(item);
+            }
+
+            for(int i = 0; i < drinkMenu.MenuItems.Count; i++)
+            {
+                venkatOrder.items.Add(drinkMenu.MenuItems[i]);
+            }
         }
     }
 }

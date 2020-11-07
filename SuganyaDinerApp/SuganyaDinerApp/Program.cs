@@ -28,6 +28,7 @@ namespace SuganyaDinerApp
             {
                 venkatOrder.items.Add(drinkMenu.MenuItems[i]);
             }
+            Console.WriteLine(venkatOrder.Total);
         }
     }
 }

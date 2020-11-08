@@ -1,6 +1,8 @@
-﻿using System;
+﻿using SuganyaDinerBusiness.DinerTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.Text;
+using static SuganyaDinerBusiness.Diner;
 
 namespace SuganyaDinerBusiness
 {
@@ -19,6 +21,21 @@ namespace SuganyaDinerBusiness
             item.Description = Description;
             item.Cost = Cost;
             MenuItems.Add(item);
+        }
+
+        public static List<Menu> GetMenus()
+        {
+            var menus = new List<Menu>();
+            var menuTableAdapter = new MenuTableAdapter();
+            var data = menuTableAdapter.GetData();
+            foreach (MenuRow item in data)
+            {
+                var menu = new Menu();
+                menu.Name = item.Name;
+                menu.MenuItems = MenuItem.GetMenuItems(item.ID);
+                menus.Add(menu);
+            }
+            return menus;
         }
     }
 }

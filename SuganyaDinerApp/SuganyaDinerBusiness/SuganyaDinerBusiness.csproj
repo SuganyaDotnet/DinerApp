@@ -4,4 +4,19 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Update="Diner.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Diner.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Diner.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Diner.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
 </Project>

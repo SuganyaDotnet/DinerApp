@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SuganyaDinerBusiness;
+using System;
 
 namespace SuganyaDinerApp
 {

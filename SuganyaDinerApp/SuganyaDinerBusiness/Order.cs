@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SuganyaDinerApp
+namespace SuganyaDinerBusiness
 {
-    class Order
+    public class Order
     {
         public List<MenuItem> items = new List<MenuItem>();
         public int Total {

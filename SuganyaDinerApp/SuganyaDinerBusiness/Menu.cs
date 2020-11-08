@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SuganyaDinerApp
+namespace SuganyaDinerBusiness
 {
-    class Menu
+    public class Menu
     {
         public Menu()
         {
